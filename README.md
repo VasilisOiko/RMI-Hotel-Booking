@@ -17,13 +17,16 @@ Host:
     provice IP number. By default using port number 5001. 
 
 Commands:
-    list                    List the rooms in format 
-                            Room type: [Room type]. Availability: [Number] rooms. Price: [Number]
 
-    book                    Make a booking
-    [Char Type_of_Room]
-    [int Number_Of_Rooms]
-    [String name]
+    <!-- List the rooms  -->
+    list         
+
+    Output format:
+        Room type: [Room type]. Availability: [Number] rooms. Price: [Number]
+
+
+    <!-- Make a booking: -->
+    book [Char Type_of_Room] [int Number_Of_Rooms] [String name]
 
         Options:                
             [Type_of_Room]: A, B, C, D, E.
@@ -31,13 +34,18 @@ Commands:
             [name]: Person's name which the rooms will be booked. 
 
 
-    guests                  List with all the guests
-    
+    <!-- List with all the guests -->
+    guests
 
-    Cancel                  Cancels a booking
-        [Char Type_of_Room]
-        [int Number_Of_Rooms]
-        [String name]
+        output format:
+            Client: [name]
+                booked:
+                        [number] [room_type] rooms
+                Total value: [total price].
+    
+    
+    <!-- Cancels a booking -->
+    Cancel [Char Type_of_Room] [int Number_Of_Rooms] [String name]
 
         Options:                
             [Type_of_Room]: A, B, C, D, E.
